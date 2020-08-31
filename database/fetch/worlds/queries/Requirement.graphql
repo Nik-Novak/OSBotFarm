@@ -1,0 +1,17 @@
+const gql = require('graphql-tag');
+
+module.exports.getTotalLevelRequirement = gql`
+query getTotalLevelRequirement($target:Int!){
+  requirement(filter:{type:TotalRequirement, total_of:level, target:$target}){
+    id
+  }
+}
+`
+
+module.exports.addTotalLevelRequirement = gql`
+mutation addTotalLevelRequirement($name:String!, $description:String!, $target:Int!){
+  addTotalRequirement(total_requirement:{name:$name, description:$description, total_of:level, target:$target}){
+    id
+  }
+}
+`

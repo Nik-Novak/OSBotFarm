@@ -1,0 +1,10 @@
+{
+  "environment": "default",
+  "version": "v1",
+  "apiDoc": "./service-hauyne-api.yaml",
+  "operationsBasePath": "./operations",
+  "host": "localhost",
+  "port": "8000",
+  "protocol": "http",
+  "operationsList": ["getDocs", "checkHealth", "checkReady", "generateName"]
+}

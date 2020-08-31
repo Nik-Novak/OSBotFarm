@@ -1,0 +1,11 @@
+{
+  "environment": "default",
+  "version": "v1",
+  "apiDoc": "./service-account-administration.yaml",
+  "operationsBasePath": "./operations",
+  "host": "localhost",
+  "port": "8000",
+  "basepath": "/account-administration",
+  "protocol": "http",
+  "operationsList": ["getDocs", "checkHealth", "checkReady", "2faEnable", "2faDisable", "emailSendVerification", "emailVerify", "statusCheck", "manageCreate"]
+}

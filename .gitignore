@@ -1,0 +1,4 @@
+database/fetch/.git
+database/graphql-server/.git
+database/modules/.git
+*/node_modules

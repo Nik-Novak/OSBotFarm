@@ -1,0 +1,1 @@
+docker tag dreambot-ubuntu images.osrsmillionires.tk/dreambot-ubuntu

@@ -1,0 +1,28 @@
+{
+  "name": "openapi-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "axios-cookiejar-support": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "child-process-promise": "^2.2.1",
+    "config": "^3.2.5",
+    "mustache-express": "^1.3.0",
+    "otp-utilities": "file:../../../modules/otp-utilities",
+    "querystring": "^0.2.0",
+    "regex-parser": "^2.2.10",
+    "socks-proxy-agent": "^5.0.0",
+    "tough-cookie": "^4.0.0",
+    "twocaptcha-solver": "file:../../../modules/twocaptcha-solver"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

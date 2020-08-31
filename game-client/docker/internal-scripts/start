@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e
+
+cd $BASEDIR
+
+INJECTED_DISPLAY_FILE=/etc/injected-env/MAIN_DISPLAY
+if [ -f "$INJECTED_DISPLAY_FILE" ]
+then
+  INJECTED_DISPLAY=$(cat $INJECTED_DISPLAY_FILE)
+  echo Found injected DISPLAY variable of $INJECTED_DISPLAY, using this as DISPLAY
+  export DISPLAY=$INJECTED_DISPLAY
+fi
+
+. $HOME/.nvm/nvm.sh #load nvm
+scripts/check-update.sh
+touch $SYSTEM_STATUS_DIR/READY_UPDATES
+scripts/install-script.sh /var/lib/auth/git.cred "$GIT_SCRIPTS_BASEPATH_URL/$GIT_SCRIPT_NAME.git" $GIT_SCRIPT_BRANCH
+touch $SYSTEM_STATUS_DIR/READY_SCRIPTS
+scripts/install-botdata.sh /var/lib/auth/git.cred "$GIT_CLIENTRESOURCES_BASEPATH_URL/botdata.git"
+touch $SYSTEM_STATUS_DIR/READY_CLIENTRESOURCES
+
+# touch $SYSTEM_STATUS_DIR/READY
+
+cd openapi-server
+NODE_ENV=production node server.js

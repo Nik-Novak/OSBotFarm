@@ -1,0 +1,9 @@
+commit aec5f67949ebca60b7da22fdb7d482a1215575b9
+tree af386abfc27d45761ee11d08935903b3016b6be1
+parent dbb3a59440df0955e66fbba9de2fe110d00c7518
+author nickl <nickl@10.0.0.225> 2020-04-05 03:34:13 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-05 03:34:13 -0600
+
+    Launch based on environment variable
+
+:100644 100644 1d7efcce897938375bbdde5ab96891780e60ee40 589cfe6111136e57fa582c2d0a05dc65b259ad09 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java

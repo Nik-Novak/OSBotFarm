@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-04-04 03:59:16.634 UTC</timestamp>
+  <md5sum>a346154b6aaa590df910689865c7fcbe</md5sum>
+  <fileName>Credential id=git.cred name=jenkins/****** (Credentials for git servers)</fileName>
+  <usages>
+    <entry>
+      <string>Polyester-pipeline</string>
+      <ranges>2-58</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

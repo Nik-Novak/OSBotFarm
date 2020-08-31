@@ -1,0 +1,9 @@
+commit 674f924d3bbe9179612d2db48fff89fa525b5b37
+tree 694c362270f49bbc530c110fc2331a74b3ea8879
+parent 604d9af2144067895c9008006bf5f658b66ffb1a
+author nickl <nickl@10.0.0.225> 2020-05-04 22:13:25 -0600
+committer nickl <nickl@10.0.0.225> 2020-05-04 22:13:25 -0600
+
+    non-stale proxies
+
+:100644 100644 eb500da5367e6f5d4ca6018102269be659bb6a56 48c79e7c4a359d2b3194340bd5113bd49b534a46 M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java

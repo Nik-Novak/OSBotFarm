@@ -1,0 +1,11 @@
+commit 286f96730f5376cb0ad467ac9da2ae2076815a4f
+tree 4c1820957752a6469a36e4a9d0c4de0dc4a1e02b
+parent 10322f2ce846567341fcafa67535c14bfe3261aa
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-06 13:10:07 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-06 13:10:07 -0400
+
+    Switched HTTPClient dependency to PolyesterFramework
+
+
+:100644 100644 d5da8fef0080a24c7433a55c6eb46d04dcd80761 96c2247edec9d69cc369fae46d79ac084f5c0f93 M	PolyesterFramework/build.gradle
+:100644 100644 210b0a320414aa05f91c396f1e81c3ba4e98906e dd988e66c6d97ef8087c9af1f30d45e6171558d8 M	PolyesterHub/build.gradle

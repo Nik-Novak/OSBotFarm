@@ -1,0 +1,6 @@
+{
+  "host": "osrsmillionaires.tk",
+  "port": 7200,
+  "protocol": "https",
+  "db": "mongodb://root:test123@localhost:27017/production?authSource=admin&w=1"
+}

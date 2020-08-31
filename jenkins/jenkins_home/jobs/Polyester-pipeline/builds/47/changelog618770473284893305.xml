@@ -1,0 +1,44 @@
+commit 86d0a498b4711a9061aaea0bad08d08346ce2044
+tree 8fc9b4423201c91a20f4083cb26c4dc4107b124a
+parent 9223860fc879d0ea673606226ff8ce2b68cee815
+author nickl <nickl@10.0.0.225> 2020-04-10 03:06:18 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-10 03:06:18 -0600
+
+    Won't let me unless I push everything, will work out a proper gitignore
+    later
+
+:000000 100644 0000000000000000000000000000000000000000 da88288c09e7f7deee5668818e055bf23bfbc391 A	.gitignore
+:100644 100644 8b3d57e2bb6041045f04aac1d26efdcbf2fd6c5b 4857be4005b87310c2fa01ff359489b4f2ece1d3 M	DreambotClientDependency/.classpath
+:100644 100644 d9465a2d0134c73ee1386566b65eb510213ff103 907724c426eaa410595a9809292471f755e74edd M	PolyesterFramework/src/main/java/polyester/io/protocol/connection/Server.java
+:100644 100644 a7055dbee45619d54bb58c1db769291116379ad3 afe67203ea9b6e6d587df31442937995ebd20978 M	PolyesterHub/build.gradle
+:000000 100644 0000000000000000000000000000000000000000 a698e59674fc5acbc59d9c75892963a0115b7c26 A	PolyesterQuester/.settings/org.eclipse.jdt.core.prefs
+:100644 100644 670e7f28eb2d81d06409932dd157d8ef886b43e5 6b8c953e4c3735e8a3667b47d450ef1714b1d21f M	PolyesterQuester/build.gradle
+:000000 100644 0000000000000000000000000000000000000000 cc4fdc293d0e50b0ad9b65c16e7ddd1db2f6025b A	gradle/wrapper/gradle-wrapper.jar
+:000000 100644 0000000000000000000000000000000000000000 6ce793f21e85406ef67d65597882475c4baf6f05 A	gradle/wrapper/gradle-wrapper.properties
+:000000 100644 0000000000000000000000000000000000000000 2fe81a7d95e4f9ad2c9b2a046707d36ceb3980b3 A	gradlew
+:000000 100644 0000000000000000000000000000000000000000 9618d8d9607cd91a0efb866bcac4810064ba6fac A	gradlew.bat
+commit 9223860fc879d0ea673606226ff8ce2b68cee815
+tree e620c4d0245bc3b39315086d8ce04ee24b45e1db
+parent a11f3b413c5866164942d71718f28fc6d0464b4f
+author nickl <nickl@10.0.0.225> 2020-04-10 03:03:15 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-10 03:03:15 -0600
+
+    Account and manager updates
+
+:100644 100644 85b13a9ff5daaad4b95420ddfad27fd44a56ab23 926f9785dfb43cbab762301296f6c4364f1d2d5a M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+:100644 100644 8826804e5d03bddfe011642d9b7e02eccbd905de 9392c59ae9726a11f8b86c3d35cf77a953cbc07d M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 100644 962a5c9826a42d4459aaefc4066570523afc9b38 9bffe3e2224a74477c3865b433f6db93163db2ec M	PolyesterHub/src/main/java/polyester/hub/HubUI.java
+:100644 100644 d4ac5e33f7309c83a5153dc8fa486d5bcfcccd1e 998f26597111a2e8eda2edd453cbc71493d9d517 M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 589cfe6111136e57fa582c2d0a05dc65b259ad09 ce0da6d791cb305ed63b4a61c7d61fffd5e9bacd M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 37e86897b8325d8273198cb8071c2e93e58bce41 5772abe36c5708d9dd2d5cd7e3d634eb76beb5eb M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java
+commit 1f3a6b6e23acffbf2793b384fb76c57046414062
+tree 902db1f30d1ef1f0a4c7350b9b9fae73df80e1c8
+parent a11f3b413c5866164942d71718f28fc6d0464b4f
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-09 00:43:11 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-09 00:43:11 -0400
+
+    Re added settings file to be able to build Script independently
+
+
+:100644 100644 8b3d57e2bb6041045f04aac1d26efdcbf2fd6c5b 4857be4005b87310c2fa01ff359489b4f2ece1d3 M	DreambotClientDependency/.classpath
+:000000 100644 0000000000000000000000000000000000000000 0e1d404b006c05c51c2ba9601622742142177754 A	PolyesterQuester/settings.gradle

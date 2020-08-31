@@ -1,0 +1,30 @@
+commit a88d779b4de9ad4173e8d07d8519afaeaac8f16a
+tree e657cbb07837a8fc4b0e9f2de9f82e124e9df211
+parent 3b91df188f67fa9a8500fbfcf566cb98ec2cc8fa
+author nickl <nickl@10.0.0.225> 2020-04-29 16:23:13 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-29 16:23:13 -0600
+
+    Updated interaction code
+
+:100644 100644 7a9de335d023d5701fbcbdff9e853de02eeb9626 43df4b295a48003fba9285fe4b4601a235f8fc8d M	PolyesterFramework/src/main/java/polyester/task/node/TaskNode.java
+:100644 100644 1794e086fe01bb3a37a252f17ce771c8c2db025d 18710b3a0181e417f1cd183290ea5e984ace8510 M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+commit 3b91df188f67fa9a8500fbfcf566cb98ec2cc8fa
+tree fc37150299be0787d1eb8000b7fc5842389654ed
+parent cd5e582feca1d0df5119170d84a2fea33e979700
+author nickl <nickl@10.0.0.225> 2020-04-27 23:55:24 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-27 23:55:24 -0600
+
+    Fishing task fix and interactions update
+
+:100644 100644 cf50410c42a82c25af91ae9731ee2e6bdf26d411 fd111689bd20e8ca8ef4c77d6df3847b135b7221 M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+:100644 100644 610636f1ac532f35bea27364d1cf78aad2050c53 6f27fb49df8c522597b5b4d6c26887faaf1bbe72 M	PolyesterFramework/src/main/java/polyester/Settings.java
+:100644 100644 5d202df6e0528a04b21979414916ceb046d06dc3 7a9de335d023d5701fbcbdff9e853de02eeb9626 M	PolyesterFramework/src/main/java/polyester/task/node/TaskNode.java
+:100644 100644 c97cdf3f270043d3787b59d53a54a16463f53ea8 17bc610bc312e30895599410c664226def4b1770 M	PolyesterFramework/src/main/java/polyester/task/node/gathering/FishNode.java
+:100644 100644 d5213c844515fb6ebefe1f5baee4789f0faa6912 e66f6293b18ad7dba15b31a9512e69198035e409 M	PolyesterFramework/src/main/java/polyester/task/node/gathering/GatherResourceNode.java
+:100644 100644 63dd43f7fd5b6997e6a6d03561ab4e63f55ccd29 536a61c4f33927fd97b98cd92d70ccd5c184e878 M	PolyesterFramework/src/main/java/polyester/task/node/interact/AbstractInteractNode.java
+:100644 100644 5821dc0598e0ed9db3d5cfc701b15a32d2e45744 1794e086fe01bb3a37a252f17ce771c8c2db025d M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 100644 9ff69494bed4917ba2bc9fb889ca57e9b206eec4 13a7457034843e9898f5a0b4afb16b7221c57267 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 000000 6ed50c640d402f81c17520219486fff95ced5c7e 0000000000000000000000000000000000000000 D	PolyesterQuester/gradle_launch_configs/PolyesterQuester - build.launch
+:100644 000000 07e643430bbeee5e071d272e380464d8c1320f52 0000000000000000000000000000000000000000 D	PolyesterQuester/gradle_launch_configs/PolyesterQuester - clean.launch
+:100644 100644 88a9b2bbc4ab2b52f652ffb3f1b728479fc7c4a8 5dd9b9caff3616343b46776bac159edc4dcc47fe M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+:100644 100644 a08a5e1ed9ac5269034b42c5179479c01db15da3 ddc495ef21e5abf94a2c50bd9d4f1e5ba1828409 M	PolyesterQuester/src/main/java/polyester/task/quest/p2p/WaterfallQuestTask.java

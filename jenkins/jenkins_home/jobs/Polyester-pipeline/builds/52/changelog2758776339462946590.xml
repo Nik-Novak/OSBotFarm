@@ -1,0 +1,58 @@
+commit cd5e582feca1d0df5119170d84a2fea33e979700
+tree 0b9c56b5629b5fb58d7df3ca57dc051463a2ff35
+parent 68549658bd54a6c0f043cb47d3014216ea72ad45
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-26 22:16:58 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-26 22:16:58 -0400
+
+    Added async support for GraphQLClient. Moved GraphQLClient to framework. Moved methodized GraphQLQueries out of GraphQLClient and into GraphQLCommonQueries
+
+
+:100644 100644 6f0f90708f3b0c3f33a861189afe85a292c291f8 e658c9aeff1a59c7a36fad3c3151af9b0feff0ed M	PolyesterFramework/build.gradle
+:000000 100644 0000000000000000000000000000000000000000 956622fe4cdb57fe05b44ef94a257844c2709197 A	PolyesterFramework/src/main/java/polyester/database/GraphQLClient.java
+:000000 100644 0000000000000000000000000000000000000000 2f2ab11cab8fef310c4c4de1283a08900691f1d4 A	PolyesterFramework/src/main/java/polyester/database/GraphQLMessageHandler.java
+:000000 100644 0000000000000000000000000000000000000000 ca363b8cb0b165f97953449fccda9abc6255e051 A	PolyesterFramework/src/main/java/polyester/database/GraphQLRequest.java
+:100644 100644 29537d96ec1b2ff71f50bec0f93ecf20b171256c 5821dc0598e0ed9db3d5cfc701b15a32d2e45744 M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 100644 1d691295b344da67d23c3749eda5286707833643 5a40bd2eba10e4f1d055ef717434e402d1f5c4a1 R066	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java	PolyesterHub/src/main/java/polyester/hub/GraphQLCommonQueries.java
+:100644 100644 a0c892bd770020fbabc36acba1c2931b5d1d89af 9ff69494bed4917ba2bc9fb889ca57e9b206eec4 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 176d22a2941f9be87e8e90dd3b13bba15098bbd7 eb500da5367e6f5d4ca6018102269be659bb6a56 M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java
+:100644 100644 73f6e932236c80030fc43cc1d7d11079f1a9b173 4d74972f711f81b9981db5940f6f542f18ca7edd M	PolyesterHub/src/main/java/polyester/hub/listener/ServerListener.java
+commit 9e052fb1ce3c62e41478ccbe9a0743d842e64cdd
+tree e167bf66d2e558ec20781f8f89de69f6539e135c
+parent a8f514090ea917ff2ed0cb0806dc8e79d39b7259
+author nickl <nickl@10.0.0.225> 2020-04-26 15:21:51 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-26 15:21:51 -0600
+
+    Account loading and saving from graphQL
+
+:100644 100644 f3e52500ff821ef705fa12d26bbfcef927f09477 cf50410c42a82c25af91ae9731ee2e6bdf26d411 M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+:100644 100644 f847b326e342987682b7f6d9eeb38637ed037f17 012f93dc27db5f054f07846a2c7c4357f77088b7 M	PolyesterFramework/src/main/java/polyester/io/client/PolyesterClient.java
+:100644 100644 b3cc42d84be12af71987ef1470d4e7117e5fd6eb fc7c418abf6992c518a9442a70cdf7bda38dc12b M	PolyesterFramework/src/main/java/polyester/io/protocol/json/JsonWriter.java
+:100644 100644 733c0f5d58a2dd69099f04d474119b10e353ada9 9e931e1a307a306dd428601c1ef7406a2eba67a8 M	PolyesterFramework/src/main/java/polyester/task/planning/simulator/InventorySimulator.java
+:100644 100644 572128473daf9f2d16b6d53981c64a1616a5b34a ed60aaab1941e8f04c181aa469e4661e3ef9a8fc M	PolyesterFramework/src/main/java/polyester/task/planning/simulator/SkillSimulator.java
+:100644 100644 1b7afa594a159babe6662004abdfb168ece99d10 71131ff6135a10dd79ef14693bbf2239e68d6d80 M	PolyesterHub/src/main/java/polyester/hub/AccountInfo.java
+:100644 100644 3de7928100b05f448d584bacbfb9e47c6307354d 29537d96ec1b2ff71f50bec0f93ecf20b171256c M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 100644 e3c8ba42ed9b4c07f6fbba4ef40f41651e5e963b 4fa311dbf78947221d02fc4357dcae8e736b2f2e M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java
+:100644 100644 a03f55d01b9bbb0012d3e538d27c272741482a8a 176d22a2941f9be87e8e90dd3b13bba15098bbd7 M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java
+:100644 100644 a32d4ccecee5ed2d74f616970d0b7e8ea15e9dd0 db10fa01fa063bab722c4e40df20ff842b90f231 M	PolyesterHub/src/main/java/polyester/hub/ServerConnection.java
+:100644 100644 1e3e66e5cc868ee2c7d9c08e8d3e4fc8e583f4c6 88a9b2bbc4ab2b52f652ffb3f1b728479fc7c4a8 M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+commit 0eb6342a024e5ee0525ba3ec2f6e5f474a79fe50
+tree bd2690f03125ddf54afb515f470a91366fcbb2c2
+parent 73c2e23f286d06f2ba3ebfa7b8bfbcab5c7142b5
+author nickl <nickl@10.0.0.225> 2020-04-23 14:09:12 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-23 14:09:12 -0600
+
+    QOL updates and quest improvements
+
+:100644 100644 9c31b27994e8b4055209c9bab37f14309098acf9 d93becabaf1cd52db4906b8b5494dee094ce67b7 M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+:100644 100644 fa9c489a85061e87757cd46d156b177a51180e2b 74445bd7dc77302b7dc9b66536b1851cfaf60f00 M	PolyesterFramework/src/main/java/polyester/task/node/combat/KillCreatureNode.java
+:100644 100644 4a9865963a2a3a8df2d25574ff6f58f614ce9726 3de7928100b05f448d584bacbfb9e47c6307354d M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 100644 6982e1feb43ff5be288fb4d92f6dc8f237f86f7f d489c41e3ed1b80bd0f1ae6db3975e3db21d0bb9 M	PolyesterHub/src/main/java/polyester/hub/AccountPanel.java
+:100644 100644 fe7a6c5264ba998c63479ca5d01161634d80dc54 549ee44b90585486f05865a7621ad7c080f77d34 M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 0e3f99409d0aee3f9e8680426b8b85e52b1cdd1e a0c892bd770020fbabc36acba1c2931b5d1d89af M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 7a79771395fbb84cead69317358bb889654aa14a a03f55d01b9bbb0012d3e538d27c272741482a8a M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java
+:100644 100644 77035dcd1e79b7475c457f5e808955c9912d47fd a954e930d6fd986862c7e1f4534ddca93163d5a2 M	PolyesterHub/src/main/java/polyester/hub/farming/FarmingMethod.java
+:100644 100644 bd48b742e5165a7884643dcebfb9b67abd38aab6 35d4aa3915b3657f635d2a5397cc58445fa6f336 M	PolyesterQuester/src/main/java/polyester/Collection.java
+:100644 100644 0c3309c412c575631c11e6aba805912e39516d49 29de203a5997d2ded29d08517d7d5af0674a213c M	PolyesterQuester/src/main/java/polyester/PolyesterQuester.java
+:100644 100644 3066e345df5411cef04f2c7a7d34ba8294fb162c 1e3e66e5cc868ee2c7d9c08e8d3e4fc8e583f4c6 M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+:100644 100644 dd0c395bfce9dbaae7de14ad06e996d0dcfab514 a8ce02601001376fd2ea47750a41a6998a76d7b8 M	PolyesterQuester/src/main/java/polyester/task/misc/FillerTask.java
+:100644 100644 d40c319eb9e0839d133c587620b9cb3b40e2b71d f1ac8e7f7972e4aa0ce5a8b2836b32487b20e910 M	PolyesterQuester/src/main/java/polyester/task/quest/f2p/GoblinDiplomacyTask.java

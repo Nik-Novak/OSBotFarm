@@ -1,0 +1,9 @@
+commit a11f3b413c5866164942d71718f28fc6d0464b4f
+tree 27ab19158591fd8e88350acad1868f20dbaa2cca
+parent f9575ac4f1bc0fc9bb8e79b0bf4ab816f7c028bd
+author nickl <nickl@10.0.0.225> 2020-04-06 22:11:38 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-06 22:11:38 -0600
+
+    Quick fix
+
+:100644 100644 bfa9aa9cf286a8421d5b9ecf8252b93e276a00a3 3066e345df5411cef04f2c7a7d34ba8294fb162c M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java

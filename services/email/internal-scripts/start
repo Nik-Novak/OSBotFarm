@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+. $HOME/.nvm/nvm.sh #load nvm
+
+cd openapi-server
+NODE_ENV=production node server.js

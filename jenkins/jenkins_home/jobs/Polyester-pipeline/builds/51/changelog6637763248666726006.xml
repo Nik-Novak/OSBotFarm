@@ -1,0 +1,20 @@
+commit 4bd95862903a9e7257f6407a98a9b1eafc96c946
+tree fc7c4384fba7c91569dc86d4b4b158e6321e9b3d
+parent 37b19e6743cd3a3416064d70f8e9f67e4f60e0ee
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-19 06:03:11 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-19 06:03:11 -0400
+
+    Added settings to gitignore
+
+
+:100644 100644 da88288c09e7f7deee5668818e055bf23bfbc391 053b8399ce6085b68ca9f3ec4847a362fc417b36 M	.gitignore
+commit 37b19e6743cd3a3416064d70f8e9f67e4f60e0ee
+tree 5d88e9394bf0998ff7d57d9f314e01b6378e35f4
+parent d8d18f5421cc5bd4d29882831296193d75cb1ea0
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-19 06:00:37 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-19 06:00:37 -0400
+
+    Added email gql integration
+
+
+:100644 100644 e3c8ba42ed9b4c07f6fbba4ef40f41651e5e963b cab1d80162506f54448607682dad32b066b2a936 M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java

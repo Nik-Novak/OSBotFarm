@@ -1,0 +1,35 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "development": "nodemon server.js",
+    "test": "NODE_ENV=test nodemon server.js",
+    "start": "NODE_ENV=production nodemon server.js",
+    "start-norefresh": "NODE_ENV=production node server.js",
+    "run-tests": "NODE_ENV=test mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "axios": "^0.19.2",
+    "config": "^3.3.0",
+    "cors": "^2.8.5",
+    "cryptr": "^6.0.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-s2s": "^0.20.2",
+    "graphql-tools": "^4.0.7",
+    "graphql-union-input-type": "^0.4.0",
+    "json-fn": "^1.1.1",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.0",
+    "models": "file:../models",
+    "node-fetch": "^2.6.0",
+    "otp-utilities": "file:../../modules/otp-utilities"
+  }
+}

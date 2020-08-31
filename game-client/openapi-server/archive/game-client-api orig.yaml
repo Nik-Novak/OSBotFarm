@@ -1,0 +1,489 @@
+openapi: 3.0.0
+servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/OSRSMillionaires/client-api/1.0.0
+  - url: //petstore.swagger.io/v2
+    description: Default server
+  - url: //petstore.swagger.io/sandbox
+    description: Sandbox server
+info:
+  description: |
+    This is a sample server Petstore server.
+    You can find out more about Swagger at
+    [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).
+    For this sample, you can use the api key `special-key` to test the authorization filters.
+
+    # Introduction
+    This API is documented in **OpenAPI format** and is based on
+    [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.
+    It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
+    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard
+    OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
+
+    # OpenAPI Specification
+    This API is documented in **OpenAPI format** and is based on
+    [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.
+    It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
+    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard
+    OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
+
+    # Cross-Origin Resource Sharing
+    This API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/).
+    And that allows cross-domain communication from the browser.
+    All responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site.
+
+    # Authentication
+
+    Petstore offers two forms of authentication:
+      - API Key
+      - OAuth2
+    OAuth2 - an open protocol to allow secure authorization in a simple
+    and standard method from web, mobile and desktop applications.
+
+    <SecurityDefinitions />
+
+  version: "1.0.0"
+  title: Game Client API
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    name: Nik Noverich
+    email: dayzftwyea@gmail.com
+  x-logo:
+    url: 'https://redocly.github.io/redoc/petstore-logo.png'
+    altText: Petstore logo
+  license:
+    name: Proprietary
+    url: 'https://google.com'
+tags:
+  - name: client
+    description: Anything to do with the Game Client itself
+  - name: tabs
+    description: Access the tabs that are open on this client
+  - name: assigned script
+    description: Access the script assigned to a particular tab
+  - name: scripts
+    description: Access the scripts available to all accounts on this client   
+x-tagGroups:
+  - name: API Endpoints
+    tags:
+      - client
+      - tabs
+      - assigned script
+      - scripts
+paths:
+
+  /client/start:
+    post:
+      operationId: clientStart
+      summary: Start the Game Client with a set of input parameters
+      description: Starts the Game Client with a set of input parameters
+      tags:
+        - client
+      requestBody:
+        $ref: '#/components/requestBodies/StartParams'
+      responses:
+        '200':
+          description: Operation Successful
+        '400':
+          description: Invalid Input
+        '500':
+          description: Operation Failed
+
+  /client/exit:
+    post:
+      operationId: clientExit
+      summary: Close the Game Client
+      description: Close the Game Client
+      parameters:
+        - name: force
+          in: query
+          description: Bypass any shutdown procedures and immediately exit the client (not recommended)
+          schema:
+            type: boolean
+      tags:
+        - client
+      responses:
+        '200':
+          description: Operation Successful
+        '500':
+          description: Operation Failed
+
+  /client/status:
+    get:
+      operationId: getClientStatus
+      summary: Get the client's current status
+      description: Get the client's current status
+      tags:
+        - client
+      parameters:
+        - name: lod
+          in: query
+          description: Level of detail (lod) of status report (integer from 0 to MAX_LOD). Omit to provide MAX_LOD report.
+          schema:
+            type: integer
+            minimum: 0
+      responses:
+        '200':
+          description: Request Successful
+        '400':
+          description: Invalid Input
+        '500':
+          description: Request Failed
+
+  /tabs:
+    get:
+      operationId: getTabs
+      summary: Get general information about tabs and their accounts 
+      description: Get information about the tabs that are currently open, and their assigned account (including running script if applicable)
+      tags:
+        - tabs
+      responses:
+        '200':
+          description: Request Successful
+        '500':
+          description: Request Failed
+  
+  /tabs/{tabID}:
+    parameters:
+        - $ref: '#/components/parameters/TabID'
+    get:
+      operationId: getTab
+      summary: Get status information about the specified tab
+      description: Gets information about the specified tab including assigned account and running script if available
+      tags:
+        - tabs
+      responses:
+        '200':
+          description: Request Successful
+        '404':
+          description: Not Found
+        '500':
+          description: Request Failed
+    post:
+      operationId: createTab
+      summary: Create a new tab on the client
+      description: Create a new tab in the client and assign an account to it
+      tags:
+        - tabs
+      requestBody:
+        $ref: '#/components/requestBodies/CreateTabParams'
+      responses:
+        '200':
+          description: Request Successful
+        '400':
+          description: Invalid Input
+        '500':
+          description: Request Failed
+    delete:
+      operationId: deleteTab
+      summary: Remove a tab from the client
+      description: Removes the current tab and its assigned account and script if applicable.
+      tags:
+        - tabs
+      responses:
+        '200':
+          description: Operation Successful
+        '404':
+          description: Not Found
+        '500':
+          description: Operation Failed
+
+  /tabs/{tabID}/script:
+    parameters:
+        - $ref: '#/components/parameters/TabID'
+    get:
+      operationId: getAssignedScript
+      summary: Gets script information of the specified tab
+      description: Gets information on the current script assigned to the account on this tab
+      tags:
+        - assigned script
+      responses:
+        '200':
+          description: Request Successful
+        '404':
+          description: Not Found
+        '500':
+          description: Request Failed
+    post:
+      operationId: assignScript
+      summary: Assign or change the script of the specified tab
+      description: Assign or change the script of the specified tab
+      tags:
+        - assigned script
+      requestBody:
+        $ref: '#/components/requestBodies/AssignScriptParams'
+      responses:
+        '200':
+          description: Request Successful
+        '400':
+          description: Invalid Input
+        '404':
+          description: Not Found
+        '500':
+          description: Request Failed
+    delete:
+      operationId: unassignScript
+      summary: Unassign and stop the script assigned to the specified tab
+      description: Stops a running script and unassigns it from the tab
+      tags:
+        - assigned script
+      responses:
+        '200':
+          description: Operation Successful
+        '500':
+          description: Operation Failed
+  /tabs/{tabID}/script/pause:
+    parameters:
+        - $ref: '#/components/parameters/TabID'
+    post:
+      operationId: pauseAssignedScript
+      summary: Pause an assigned script
+      description: Pause a script assigned to the specified tab. If already paused, no change occurs.
+      tags:
+        - assigned script
+      responses:
+        '200':
+          description: Operation Successful
+        '500':
+          description: Operation Failed
+  /tabs/{tabID}/script/resume:
+    parameters:
+        - $ref: '#/components/parameters/TabID'
+    post:
+      operationId: resumeAssignedScript
+      summary: Resume an assigned script
+      description: Resume a script assigned to the specified tab. If already running, no change occurs.
+      tags:
+        - assigned script
+      responses:
+        '200':
+          description: Operation Successful
+        '500':
+          description: Operation Failed
+      
+      
+  /scripts:
+    get:
+      operationId: getScripts
+      summary: Get all scripts available to this client
+      description: Gets all the stored scripts available to any account on this client.
+      tags:
+        - scripts
+      responses:
+        '200':
+          description: Request Successful
+        '500':
+          description: Request Failed
+    
+
+  /scripts/{scriptName}:
+    parameters:
+        - name: scriptName
+          in: path
+          description: Name of the available script to query
+          required: true
+          schema:
+            type: string
+    get:
+      operationId: getScript
+      summary: Get the metadata of an available script
+      description: Gets the metadata of the specified available script
+      tags:
+        - scripts
+      responses:
+        '200':
+          description: Request Successful
+        '404': 
+          description: Not Found
+        '500':
+          description: Request Failed
+    post:
+      operationId: transferScript
+      summary: Update an existing or transfer a new script
+      description: Update an existing or transfer a new script such that it is available for all accounts on the client.
+      tags:
+        - scripts
+      requestBody:
+        $ref: '#/components/requestBodies/TransferScriptParams'
+      responses:
+        '200':
+          description: Operation Successful
+        '404': 
+          description: Not Found
+        '500':
+          description: Operation Failed
+
+  # /screenshots: Logistics of this unknown
+  # /screenshots/take:
+  # /watch:
+
+components:
+  parameters:
+    TabID:
+      name: tabID
+      in: path
+      description: Identifier number of the tab in question. (number from 1..n where n is the number of tabs open on client)
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+
+  schemas:
+    StartParams:
+      type: object
+      required:
+        - username
+        - password
+      allOf: #properties concat
+        - type: object
+          properties:
+            username:
+              type: string
+              description: Dreambot Forums username
+              example: test123@gmail.com
+            password:
+              type: string
+              description: Dreambot Forums Password (cleartext)
+              example: password123
+        - $ref: '#/components/schemas/AccountDeployProperties'
+        - type: object
+          properties:
+            fps:
+              type: integer
+              description: Maximum FPS the client will run at
+              example: 30
+            proxyHostArg:
+              type: string
+              format: ipv4
+              description: Host IP of a proxy for all tabs on this client to use
+              example: 
+            proxyPortArg:
+              type: integer
+              description: Host port of a proxy for all tabs on this client to use
+            slim:
+              type: boolean
+              description: Shrinks the client's UI a bit
+            single:
+              type: boolean
+              description:  Removes the tab bar, disabling the ability to open or close tabs
+    CreateTabParams:
+      type: object
+      allOf: #properties concat
+        - $ref: '#/components/schemas/AccountDeployProperties'
+    ScriptMetadata:
+      type: object
+      required:
+        - script
+      properties:
+        script:
+          type: string
+          description: The name of the script (must be accurate)
+          example: WoodcuttingScript
+        scriptExecutable:
+          $ref: '#/components/schemas/URL'
+    World: # add world range validation
+      type: integer
+      example: 318
+    URL:
+      type: string
+      format: url
+      example: https://example.com
+      
+    AccountDeployProperties:
+      type: object
+      required:
+        - accountUsernames
+        - accountPasswords
+      properties:
+        accountUsernames:
+          type: array
+          minItems: 1
+          items:
+            type: string
+          description: OSRS account usernames to be deployed on the client
+          example: [ account1@gmail.com, account2@gmail.com ]
+        accountPasswords:
+          type: array
+          minItems: 1
+          items:
+            type: string
+          description: Matching passwords for the accounts to be deployed on the client
+          example: [ password1, password2 ]
+        world:
+          $ref: '#/components/schemas/World'
+        script:
+          type: array
+          items:
+            type: string
+          description: List of scripts to run. The number of scripts should match the number of accounts, and each script will be mapped to its respective account in parameter order.
+          example: [ scriptName1, scriptName2 ]
+        params:
+          type: array
+          items:
+            type: string
+            example: parameter1:value1 parameter2:value2 
+          description: Any parameters separated by spaces that the script supports, in whatever format the script specifies. The number of parameter strings in the array should match the number of scripts specified, and each parameter string will be mapped to its respective script in parameter order.
+          example: [ 'parameter1:value1 parameter2:value2', 'droplogs:true upgradeaxe:true antiban:false' ]
+      
+  requestBodies:
+    StartParams:
+      description: Request body with parameters available when starting up the client.
+      required: true
+      content:
+        application/json:
+          schema:
+            anyOf:
+              - $ref: '#/components/schemas/StartParams'
+    CreateTabParams:
+      description: Request body with parameters available when  opening a new tab on the client.
+      required: true
+      content:
+        application/json:
+          schema:
+            anyOf:
+              - $ref: '#/components/schemas/CreateTabParams'
+    AssignScriptParams:
+      description: Request body with optional and required parameters necessary for assigning a script to something.
+      required: true
+      content:
+        application/json:
+          schema:
+            anyOf:
+              - $ref: '#/components/schemas/ScriptMetadata'
+    TransferScriptParams:
+      description: Request body with parameters necessary for transferring a script.
+      required: true
+      content:
+        application/json:
+          schema:
+            anyOf:
+              - $ref: '#/components/schemas/ScriptMetadata'
+              # - $ref: '#/components/schemas/ScriptMetadataObject'
+  
+  securitySchemes:
+    petstore_auth:
+      description: |
+        Get access to data while protecting your account credentials.
+        OAuth2 is also a safer and more secure way to give you access.
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://petstore.swagger.io/api/oauth/dialog'
+          scopes:
+            'write:pets': modify pets in your account
+            'read:pets': read your pets
+    api_key:
+      description: >
+        For this sample, you can use the api key `special-key` to test the
+        authorization filters.
+      type: apiKey
+      name: api_key
+      in: header
+  examples:
+    Order:
+      value:
+        quantity: 1,
+        shipDate: 2018-10-19T16:46:45Z,
+        status: placed,
+        complete: false

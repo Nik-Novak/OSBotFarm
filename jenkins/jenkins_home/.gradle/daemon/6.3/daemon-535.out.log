@@ -1,0 +1,92 @@
+2020-04-04T04:17:33.466+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:MaxMetaspaceSize=256m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+2020-04-04T04:17:33.552+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=bb6ee6ef-ed53-4cfb-a2a4-8d4f98c5a019,javaHome=/usr/local/openjdk-8,daemonRegistryDir=/var/jenkins_home/.gradle/daemon,pid=535,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2020-04-04T04:17:33.572+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+2020-04-04T04:17:33.572+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2020-04-04T04:17:33.572+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.6
+2020-04-04T04:17:33.573+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2020-04-04T04:17:33.573+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2020-04-04T04:17:33.575+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2020-04-04T04:17:33.576+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]].
+2020-04-04T04:17:33.580+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Sat Apr 04 04:17:33 UTC 2020, with address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:33.581+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:33.581+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=bb6ee6ef-ed53-4cfb-a2a4-8d4f98c5a019,javaHome=/usr/local/openjdk-8,daemonRegistryDir=/var/jenkins_home/.gradle/daemon,pid=535,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2020-04-04T04:17:33.582+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=bb6ee6ef-ed53-4cfb-a2a4-8d4f98c5a019,javaHome=/usr/local/openjdk-8,daemonRegistryDir=/var/jenkins_home/.gradle/daemon,pid=535,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2020-04-04T04:17:33.587+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-04T04:17:33.590+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-04T04:17:33.593+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-04T04:17:33.593+0000 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2020-04-04T04:17:33.594+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2020-04-04T04:17:33.598+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2020-04-04T04:17:33.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2020-04-04T04:17:33.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-04T04:17:33.609+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:34044 to /127.0.0.1:33941.
+2020-04-04T04:17:33.629+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: received class org.gradle.launcher.daemon.protocol.Build
+2020-04-04T04:17:33.630+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 16: Received non-IO message from client: Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}
+2020-04-04T04:17:33.631+0000 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}.
+2020-04-04T04:17:33.631+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub} with connection: socket connection from /127.0.0.1:33941 to /127.0.0.1:34044.
+2020-04-04T04:17:33.633+0000 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:33941 to /127.0.0.1:34044] after 0.0 minutes of idle
+2020-04-04T04:17:33.634+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:33.634+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:33.634+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-04T04:17:33.635+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-04T04:17:33.636+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-04T04:17:33.637+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-04T04:17:33.637+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-04T04:17:33.638+0000 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}. Dispatching build started information...
+2020-04-04T04:17:33.638+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 18: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@130473
+2020-04-04T04:17:33.640+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin, COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log, JAVA_URL_VERSION=8u242b08, RUN_DISPLAY_URL=http://localhost:7300/job/Polyester-pipeline/5/display/redirect, HUDSON_HOME=/var/jenkins_home, RUN_CHANGES_DISPLAY_URL=http://localhost:7300/job/Polyester-pipeline/5/display/redirect?page=changes, JOB_URL=http://localhost:7300/job/Polyester-pipeline/, JAVA_HOME=/usr/local/openjdk-8, HUDSON_COOKIE=19f00816-8acd-469c-87b1-86d93fe74bcf, TERM=xterm, BUILD_ID=5, JENKINS_VERSION=2.222.1, JENKINS_NODE_COOKIE=3e00e647-c8d3-4a01-8d16-7416bdad7249, LANG=C.UTF-8, JOB_NAME=Polyester-pipeline, NODE_LABELS=master, HUDSON_URL=http://localhost:7300/, JENKINS_SERVER_COOKIE=durable-6ad4f7136232f2c04039de2316dba35b, WORKSPACE=/var/jenkins_home/workspace/Polyester-pipeline, JENKINS_SLAVE_AGENT_PORT=50000, PWD=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub, JAVA_VERSION=8u242, JENKINS_URL=http://localhost:7300/, BUILD_TAG=jenkins-Polyester-pipeline-5, STAGE_NAME=Build-hub, EXECUTOR_NUMBER=0, HUDSON_SERVER_COOKIE=023e629b1656e81d, JENKINS_UC=https://updates.jenkins.io, JAVA_BASE_URL=https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_, JOB_BASE_NAME=Polyester-pipeline, OLDPWD=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub, JENKINS_INCREMENTALS_REPO_MIRROR=https://repo.jenkins-ci.org/incrementals, JENKINS_HOME=/var/jenkins_home, REF=/usr/share/jenkins/ref, BUILD_NUMBER=5, NODE_NAME=master, BUILD_DISPLAY_NAME=#5, BUILD_URL=http://localhost:7300/job/Polyester-pipeline/5/, HOSTNAME=31cd17e93edd, JOB_DISPLAY_URL=http://localhost:7300/job/Polyester-pipeline/display/redirect, JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental, HOME=/var/jenkins_home, SHLVL=0}
+2020-04-04T04:17:33.642+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: received class org.gradle.launcher.daemon.protocol.CloseInput
+2020-04-04T04:17:33.643+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 16: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@6ac42b68
+2020-04-04T04:17:33.643+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-04-04T04:17:33.644+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 535). The daemon log file: /var/jenkins_home/.gradle/daemon/6.3/daemon-535.out.log
+2020-04-04T04:17:33.645+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 477.6 MB]
+2020-04-04T04:17:33.653+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-04-04T04:17:33.653+0000 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
+2020-04-04T04:17:33.653+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=bb6ee6ef-ed53-4cfb-a2a4-8d4f98c5a019,javaHome=/usr/local/openjdk-8,daemonRegistryDir=/var/jenkins_home/.gradle/daemon,pid=535,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2020-04-04T04:17:33.654+0000 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':PolyesterFramework:compileJava'.
+> Could not resolve all files for configuration ':PolyesterFramework:compileClasspath'.
+   > Cannot convert URL 'C:/Users/nnova/DreamBot/BotData/client.jar' to a file.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.3/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD FAILED in 16s
+1 actionable task: 1 executed
+2020-04-04T04:17:38.762+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2020-04-04T04:17:38.767+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-04T04:17:38.768+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:33941 to /127.0.0.1:34044]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@49719873 with state Busy
+2020-04-04T04:17:38.768+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:33941 to /127.0.0.1:34044]
+2020-04-04T04:17:38.768+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-04T04:17:38.769+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:38.769+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:38.769+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-04T04:17:38.769+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-04T04:17:38.770+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-04T04:17:38.770+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@37cb321b]
+2020-04-04T04:17:38.771+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@37cb321b]
+2020-04-04T04:17:38.771+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-04T04:17:38.796+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=db6daceb-3ac7-4727-afac-77a92908ceaa, currentDir=/var/jenkins_home/workspace/Polyester-pipeline/PolyesterHub}
+2020-04-04T04:17:38.822+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: received class org.gradle.launcher.daemon.protocol.Finished
+2020-04-04T04:17:38.822+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 16: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@54f1eba8
+2020-04-04T04:17:38.823+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2020-04-04T04:17:38.823+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: received null
+2020-04-04T04:17:38.823+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 16: Received end-of-input from client.
+2020-04-04T04:17:38.824+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: null
+2020-04-04T04:17:38.824+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: stopping connection
+2020-04-04T04:17:38.825+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: stopping connection
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2020-04-04T04:17:39.710+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [40a512fc-1523-4afe-a5c3-3a85fbc35d5d port:33941, addresses:[localhost/127.0.0.1]]
+2020-04-04T04:17:39.710+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-04T04:17:39.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-04T04:17:39.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.

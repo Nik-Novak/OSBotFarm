@@ -1,0 +1,76 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.38">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.80">
+    <script>node {
+    
+   stage(&apos;Preparation&apos;) {
+        deleteDir()
+        dir(&apos;polyester&apos;){
+            git url: &apos;https://git.osrsmillionaires.tk/development/rubex/polyester.git&apos;, branch: &apos;production&apos;, credentialsId: &apos;git.cred&apos;
+        }
+        dir(&apos;manager&apos;){
+            git url: &apos;https://git.osrsmillionaires.tk/deployment/manager.git&apos;, branch: &apos;master&apos;, credentialsId: &apos;git.cred&apos;
+        }
+        dir(&apos;scripts/rubex/polyester&apos;){
+            git url: &apos;https://git.osrsmillionaires.tk/scripts/rubex/polyester.git&apos;, branch: &apos;master&apos;, credentialsId: &apos;git.cred&apos;
+        }
+   }
+   stage(&apos;Build-Hub&apos;) {
+       dir (&apos;polyester/PolyesterHub&apos;){
+           withGradle {
+               sh &apos;chmod +x ./gradlew&apos;
+               sh &apos;./gradlew build fatJar&apos;
+           }
+      }
+   }
+   stage(&apos;Update-Manager&apos;){
+      sh &apos;cp ./polyester/PolyesterHub/build/libs/PolyesterHub-all*.jar ./manager/Manager.jar&apos;
+      dir (&apos;./manager&apos;){
+        withCredentials([usernamePassword(credentialsId: &apos;git.cred&apos;, usernameVariable: &apos;GIT_USERNAME&apos;, passwordVariable: &apos;GIT_PASSWORD&apos;)]){
+            sh(&apos;&apos;&apos;
+                git config --local user.email &quot;jenkins@osrsmillionaires.tk&quot;
+                git config --local user.name &quot;jenkins&quot;
+                git config --local credential.helper &quot;!f() { echo username=\\$GIT_USERNAME; echo password=\\$GIT_PASSWORD; }; f&quot;
+                git add .
+                git status
+                git commit -m &quot;Jenkins Auto-build&quot;
+                git push origin master
+            &apos;&apos;&apos;)
+        }
+      }
+   }
+   stage(&apos;Update-Scripts&apos;){
+      sh &apos;cp ./polyester/PolyesterQuester/build/libs/PolyesterQuester-all*.jar ./scripts/rubex/polyester/PolyesterQuester.jar&apos;
+      dir (&apos;./scripts/rubex/polyester&apos;){
+        withCredentials([usernamePassword(credentialsId: &apos;git.cred&apos;, usernameVariable: &apos;GIT_USERNAME&apos;, passwordVariable: &apos;GIT_PASSWORD&apos;)]){
+            sh(&apos;&apos;&apos;
+                git config --local user.email &quot;jenkins@osrsmillionaires.tk&quot;
+                git config --local user.name &quot;jenkins&quot;
+                git config --local credential.helper &quot;!f() { echo username=\\$GIT_USERNAME; echo password=\\$GIT_PASSWORD; }; f&quot;
+                git add .
+                git status
+                git commit -m &quot;Jenkins Auto-build&quot;
+                git push origin master
+            &apos;&apos;&apos;)
+        }
+      }
+   }
+   stage(&apos;Refresh-Kubernetes&apos;){
+       
+   }
+   stage(&apos;Final&apos;) {
+       
+    //   deleteDir()
+   }
+}
+</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <authToken>yRbfDv1WQR</authToken>
+  <disabled>false</disabled>
+</flow-definition>

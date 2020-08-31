@@ -1,0 +1,10 @@
+{
+  "environment": "default",
+  "version": "v1",
+  "apiDoc": "./service-email-administration.yaml",
+  "operationsBasePath": "./operations",
+  "host": "localhost",
+  "port": "8000",
+  "protocol": "http",
+  "operationsList": ["getDocs", "checkHealth", "checkReady", "emailCreate"]
+}

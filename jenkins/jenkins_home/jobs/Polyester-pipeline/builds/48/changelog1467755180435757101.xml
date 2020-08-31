@@ -1,0 +1,11 @@
+commit e87d7fd73fbcb4022608ef188bbb50799cdb7134
+tree 98bcc274359950596bab403b1b4c63b27673d2e9
+parent 7c2e91434564a27f39f82ecfeaf0c14d1d13a60e
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-11 13:55:06 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-11 13:55:06 -0400
+
+    Added random world querying when deploying accounts
+
+
+:100644 100644 cf7a9e718d65f3feac91e72ecec214ede139d2cb 2a8692ef5413e78f10f2737014832c52dfbe1992 M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java
+:100644 100644 ce0da6d791cb305ed63b4a61c7d61fffd5e9bacd 95a6ce7d73a7bdefd44535b9a6d5a9518319e3eb M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java

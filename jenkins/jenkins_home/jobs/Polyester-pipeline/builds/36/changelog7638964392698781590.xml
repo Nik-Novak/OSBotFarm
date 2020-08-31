@@ -1,0 +1,10 @@
+commit 952dd431ce03618a56398d3c3528fca941c36429
+tree 1d2bec52bb2d8b90826b79652239231009874650
+parent 5a3b5f308b3ce4cc4da9ea689108c440347e799d
+author jenkins <jenkins@osrsmillionaires.tk> 2020-04-04 20:43:37 +0000
+committer jenkins <jenkins@osrsmillionaires.tk> 2020-04-04 20:43:37 +0000
+
+    Jenkins Auto-build
+
+
+:100644 100644 4819c5e336d76a55de6737cf43faca8e170ba9b9 94265c39dd5e853a51befb506c9aaa0747073756 M	Manager.jar

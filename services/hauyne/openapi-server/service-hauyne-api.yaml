@@ -1,0 +1,302 @@
+openapi: 3.0.0
+servers:
+  - url: https://services.osrsmillionaires.tk/hauyne
+    description: External endpoint
+  - url: http://svc-internal.services/hauyne
+    description: Internal endpoint
+info:
+  version: 1.0.0
+  title: Hauyne API
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    name: bottomfrag
+    email: bottomfrag@osrsmillionaires.tk
+  x-logo:
+    url: 'https://redocly.github.io/redoc/petstore-logo.png'
+    altText: Petstore logo
+  license:
+    name: Proprietary
+    url: 'https://google.com'
+tags:
+  - name: general
+    description: General endpoints
+  - name: generate
+    description: Endpoints for generating content
+x-tagGroups:
+  - name: API Endpoints
+    tags:
+      - general
+      - generate
+paths:
+  /docs:
+    get:
+      operationId: getDocs
+      summary: Gets the API Documentation
+      description: Get the human-readable API docs for this API
+      tags:
+        - general
+      responses:
+        '200':
+          description: HTML API Document
+          content:
+            text/html:
+              schema:
+                type: string
+                example: <html><head></head><body>Documentation</body></html>
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /healthz:
+    get:
+      operationId: checkHealth
+      summary: Check the health of this client
+      description: Returns information about the health of this client, or an error if unhealthy.
+      tags:
+        - general
+      parameters:
+        - name: lod
+          in: query
+          description: Level of detail (lod) of status report (integer from 0 to MAX_LOD). Omit to provide MAX_LOD report.
+          schema:
+            type: integer
+            minimum: 0
+            default: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheck"
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheck"
+  /readyz:
+    get:
+      operationId: checkReady
+      summary: Check the readiness of this client
+      description: Returns information about the readiness state of this client, or an error if not ready.
+      tags:
+        - general
+      parameters:
+        - name: lod
+          in: query
+          description: Level of detail (lod) of status report (integer from 0 to MAX_LOD). Omit to provide MAX_LOD report.
+          schema:
+            type: integer
+            minimum: 0
+            default: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadyCheck"
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadyCheck"
+  
+  /generate-name:
+    post:
+      operationId: generateName
+      summary: Generate a user-name with some optional parameters
+      description: Generates a realistic user-name with some optional parameters
+      tags:
+        - generate
+      requestBody:
+        $ref: '#/components/requestBodies/GenerateName'
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerateNameResponse"
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '500':
+          description: Request Failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  parameters:
+    TabID:
+      name: tabID
+      in: path
+      description: Identifier number of the tab in question. (number from 1..n where n is the number of tabs open on client)
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+
+  schemas:
+    GenerateNameParams:
+      type: object
+      properties:
+        minLength:
+          type: integer
+          description: The minimum desired length of the generated string. If a generated string is too short, it will generate additional words and concatenate them with spaces until the minimum length is achieved.
+          example: 3
+        maxLength:
+          type: integer
+          description: The maximum desired length of the generated string.
+          example: 12
+        minWordLength:
+          type: integer
+          description: The minimum length of an individual word within the generated string. Words are defined as consecutive character sequences separated by spaces from other words.
+          example: 2
+        maxWordLength:
+          type: integer
+          description: The maximum length of an individual word within the generated string. Words are defined as consecutive character sequences separated by spaces from other words.
+          example: 8
+        substitutions:
+          type: array
+          description: An array of substitutions to be performed on the returning string
+          items:
+            type: object
+            required:
+            - regex
+            - oneOf
+            - chance
+            properties:
+              regex:
+                type: string
+                description: Regex to match in the generated name
+                example: "e"
+              oneOf:
+                type: array
+                description: Array of strings to replace the matched regex with. Will choose randomly and equally between all available replacements.
+                example: ["3", E]
+                items:
+                  type: string
+                  description: replacement value
+                  example: "3"
+              chance:
+                type: number
+                description: Number from 0 to 1 inclusive that represents the percentage chance of a substitution occurring on each regex match. 0.3 would equate to 30% chance
+                minimum: 0
+                maximum: 1
+                example: 0.3
+    GenerateNameResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name generated by the service
+          example: nachetesk
+        pronounciation:
+          type: string
+          description: Pronounciation for the generated name
+          example: naketesk
+    World: # add world range validation
+      type: integer
+      example: 318
+    URL:
+      type: string
+      format: url
+      example: https://example.com
+    Error:
+      type: object
+      required:
+        - code
+        - error
+        - message
+        - path
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: Error code assigned based on the type of failure (different from status)
+          example: 23
+        error:
+          type: string
+          description: Detailed message about the error
+          example: "Invalid response for status code 200: should have required property 'name'"
+        message:
+          type: string
+          description: General message about the error
+          example: The response was not valid.
+        path:
+          type: string
+          description: What caused the error
+          example: "accountUsername"
+    HealthCheck:
+      type: object
+      properties:
+        api_version:
+          anyOf:
+          - type: string
+          - $ref: '#/components/schemas/Error'
+    ReadyCheck:
+      type: object
+      properties:
+        apiserver_running:
+          anyOf:
+          - type: boolean
+          - $ref: '#/components/schemas/Error'
+  requestBodies:
+    GenerateName:
+      description: Request body with parameters for generating a name
+      required: true
+      content:
+        application/json:
+          schema:
+            anyOf:
+              - $ref: '#/components/schemas/GenerateNameParams'
+  securitySchemes:
+    petstore_auth:
+      description: |
+        Get access to data while protecting your account credentials.
+        OAuth2 is also a safer and more secure way to give you access.
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://petstore.swagger.io/api/oauth/dialog'
+          scopes:
+            'write:pets': modify pets in your account
+            'read:pets': read your pets
+    api_key:
+      description: >
+        For this sample, you can use the api key `special-key` to test the
+        authorization filters.
+      type: apiKey
+      name: api_key
+      in: header
+  examples:
+    Order:
+      value:
+        quantity: 1,
+        shipDate: 2018-10-19T16:46:45Z,
+        status: placed,
+        complete: false
+

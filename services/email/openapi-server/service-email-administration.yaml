@@ -1,0 +1,257 @@
+openapi: 3.0.0
+servers:
+  - url: https://services.osrsmillionaires.tk/account-administration
+    description: External endpoint
+  - url: http://svc-internal.services/account-administration
+    description: Internal endpoint
+info:
+  version: 1.0.0
+  title: Account Administration API
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    name: bottomfrag
+    email: bottomfrag@osrsmillionaires.tk
+  x-logo:
+    url: 'https://redocly.github.io/redoc/petstore-logo.png'
+    altText: Petstore logo
+  license:
+    name: Proprietary
+    url: 'https://google.com'
+tags:
+  - name: general
+    description: General endpoints
+  - name: status
+    description: Endpoints for account status
+  - name: 2fa
+    description: Endpoints for 2fa settings
+  - name: email
+    description: Endpoints for email settings
+x-tagGroups:
+  - name: API Endpoints
+    tags:
+      - general
+      - status
+      - 2fa
+      - email
+paths:
+  /docs:
+    get:
+      operationId: getDocs
+      summary: Gets the API Documentation
+      description: Get the human-readable API docs for this API
+      tags:
+        - general
+      responses:
+        '200':
+          description: HTML API Document
+          content:
+            text/html:
+              schema:
+                type: string
+                example: <html><head></head><body>Documentation</body></html>
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /healthz:
+    get:
+      operationId: checkHealth
+      summary: Check the health of this client
+      description: Returns information about the health of this client, or an error if unhealthy.
+      tags:
+        - general
+      parameters:
+        - name: lod
+          in: query
+          description: Level of detail (lod) of status report (integer from 0 to MAX_LOD). Omit to provide MAX_LOD report.
+          schema:
+            type: integer
+            minimum: 0
+            default: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheck"
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheck"
+  /readyz:
+    get:
+      operationId: checkReady
+      summary: Check the readiness of this client
+      description: Returns information about the readiness state of this client, or an error if not ready.
+      tags:
+        - general
+      parameters:
+        - name: lod
+          in: query
+          description: Level of detail (lod) of status report (integer from 0 to MAX_LOD). Omit to provide MAX_LOD report.
+          schema:
+            type: integer
+            minimum: 0
+            default: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadyCheck"
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadyCheck"
+  /email/create:
+    post:
+      operationId: emailCreate
+      summary: Create an email account
+      description: Creates an email account with the specified parameters
+      tags:
+        - email
+      requestBody:
+        $ref: '#/components/requestBodies/EmailCreate'
+      responses:
+        '200':
+          description: Operation Successful
+        '400':
+          description: Invalid Input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '500':
+          description: Operation Failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  parameters:
+    TabID:
+      name: tabID
+      in: path
+      description: Identifier number of the tab in question. (number from 1..n where n is the number of tabs open on client)
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  schemas:
+    EmailCreateParams:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - username
+        - domain
+        - password
+      properties:
+        firstName:
+          type: string
+          description: First name to be registered with the account
+          example: John
+        lastName:
+          type: string
+          description: Last name to be registerd with the account
+          example: Smith
+        username:
+          type: string
+          description: Username portion of the email. i.e. my-account from my-account@yandex.com
+          example: my-account
+        domain:
+          type: string
+          enum:
+            - yandex.com
+          description: Domain portion of the email. i.e. yandex.com from my-account@yandex.com
+          example: yandex.com
+        password:
+          type: string
+          format: password
+          description: Password to be used to login to the account
+          example: password123
+        phoneNumber:
+          type: string
+          description: Phone number to be registered to the account
+          example: password123
+    URL:
+      type: string
+      format: url
+      example: https://example.com
+    Error:
+      type: object
+      required:
+        - code
+        - error
+        - message
+        - path
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: Error code assigned based on the type of failure (different from status)
+          example: 23
+        error:
+          type: string
+          description: Detailed message about the error
+          example: "Invalid response for status code 200: should have required property 'name'"
+        message:
+          type: string
+          description: General message about the error
+          example: The response was not valid.
+        path:
+          type: string
+          description: What caused the error
+          example: "accountUsername"
+    HealthCheck:
+      type: object
+      properties:
+        api_version:
+          anyOf:
+          - type: string
+          - $ref: '#/components/schemas/Error'
+    ReadyCheck:
+      type: object
+      properties:
+        apiserver_running:
+          anyOf:
+          - type: boolean
+          - $ref: '#/components/schemas/Error'
+  requestBodies:
+    EmailCreate:
+      description: Request body with parameters for creating an email account
+      required: true
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/EmailCreateParams'
+  examples:
+    Order:
+      value:
+        quantity: 1,
+        shipDate: 2018-10-19T16:46:45Z,
+        status: placed,
+        complete: false
+

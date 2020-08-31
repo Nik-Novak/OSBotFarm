@@ -1,0 +1,30 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.model.UserIdMapper>
+  <version>1</version>
+  <idToDirectoryNameMap class="concurrent-hash-map">
+    <entry>
+      <string>git</string>
+      <string>git_7604328765593008409</string>
+    </entry>
+    <entry>
+      <string>nickl</string>
+      <string>nickl_1156095160224298211</string>
+    </entry>
+    <entry>
+      <string>novakn</string>
+      <string>novakn_5180468831074261682</string>
+    </entry>
+    <entry>
+      <string>osrsmmaindeployment</string>
+      <string>OsrsmMainDeplo_8700218008484453593</string>
+    </entry>
+    <entry>
+      <string>jenkins</string>
+      <string>jenkins_8744195914637557297</string>
+    </entry>
+    <entry>
+      <string>admin</string>
+      <string>admin_5500872326084541269</string>
+    </entry>
+  </idToDirectoryNameMap>
+</hudson.model.UserIdMapper>

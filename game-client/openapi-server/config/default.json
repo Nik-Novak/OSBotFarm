@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "apiDoc": "./game-client-api.yaml",
+  "operationsBasePath": "./operations",
+  "host": "localhost",
+  "port": "8000",
+  "protocol": "http",
+  "operationsList": ["getDocs", "checkHealth", "checkReady", "clientStart", "clientExit", "getClientStatus", "getTabs", "createTab", "getTab", "deleteTab", "getAssignedScript", "assignScript", "unassignScript", "pauseAssignedScript", "resumeAssignedScript", "getScripts", "getScript", "updateScript"]
+}

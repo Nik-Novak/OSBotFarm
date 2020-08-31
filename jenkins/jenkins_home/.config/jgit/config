@@ -1,0 +1,39 @@
+[filesystem "31cd17e93edd|Oracle Corporation|1.8.0_242|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 6686 microseconds
+[filesystem "f6e19b9d8c96|Oracle Corporation|1.8.0_242|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 3451 microseconds
+[filesystem "71d129b1d829|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1002 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "8228f54ed9c9|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "72a72ecfb680|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "23eced44a653|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1002 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "3081e6eeed61|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "6880e2234959|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "b8a8a4429f68|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "e77b34f214a9|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1002 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "2bc909c3e1eb|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "cc623ed7a803|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "494ea32843a1|Oracle Corporation|1.8.0_131|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds

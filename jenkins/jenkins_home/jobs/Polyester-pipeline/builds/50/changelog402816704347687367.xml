@@ -1,0 +1,19 @@
+commit d8d18f5421cc5bd4d29882831296193d75cb1ea0
+tree 4765c4f9598e57fe082303f73249da26a5e81de3
+parent 73c2e23f286d06f2ba3ebfa7b8bfbcab5c7142b5
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-17 18:40:46 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-17 18:40:46 -0400
+
+    Converted existing service endpoints to new ingress endpoints
+
+
+:100644 100644 9c31b27994e8b4055209c9bab37f14309098acf9 0e3b4f12167458ea17a23761d38ad67885794f7e M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+commit 73c2e23f286d06f2ba3ebfa7b8bfbcab5c7142b5
+tree f491173c472cf3a55a264c7be8d1fabfaf4a896c
+parent 267c036e6352ad623f15ab0fd22337970efe5099
+author nickl <nickl@10.0.0.225> 2020-04-12 20:20:50 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-12 20:20:50 -0600
+
+    Updated login procedure
+
+:100644 100644 926f9785dfb43cbab762301296f6c4364f1d2d5a 9c31b27994e8b4055209c9bab37f14309098acf9 M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java

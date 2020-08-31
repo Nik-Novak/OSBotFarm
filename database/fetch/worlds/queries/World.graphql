@@ -1,0 +1,17 @@
+const gql = require('graphql-tag');
+
+module.exports.getWorld = gql`
+query getWorld($filter:WorldFilter){
+	world(filter:$filter){
+    world
+  }
+}
+`
+
+module.exports.addWorld = gql`
+mutation addWorld($world:WorldInput!){
+  addWorld(world:$world){
+    world
+  }
+}
+`

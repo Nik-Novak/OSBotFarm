@@ -1,0 +1,1 @@
+/home/osrs/kubernetes/helm-charts/account-administration/Chart.yaml

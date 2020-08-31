@@ -1,0 +1,1 @@
+docker build . -t images.osrsmillionaires.tk/svc-hauyne

@@ -1,0 +1,30 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.3.5",
+    "apollo-boost": "^0.4.7",
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "graphql": "^14.6.0",
+    "graphql-client": "file:../../kubernetes/modules/graphql-client",
+    "jquery": "^3.5.0",
+    "lodash": "^4.17.15",
+    "models": "file:../models",
+    "mongoose": "^5.9.4",
+    "node-fetch": "^2.6.0",
+    "socks-proxy-agent": "^5.0.0",
+    "stream-chain": "^2.2.1",
+    "stream-json": "^1.3.3",
+    "winston": "^3.2.1"
+  }
+}

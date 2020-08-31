@@ -1,0 +1,11 @@
+commit bc7246a7dd2f52aea4b63be3479ac6ef5d228bcd
+tree 4f207fa3d1eac1350b65868564fb699d6edf8466
+parent bcdc9f2f1ca8592b0a9af36f628669da8bfa707c
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-29 21:01:26 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-29 21:01:26 -0400
+
+    Updated world queries to support new models - 2
+
+
+:100644 100644 448a6cd0629408b9cea85a448b26d2c943181ff2 bf08684bbb0cf7ce1c761526f7fd5e9e8cae497a M	PolyesterHub/src/main/java/polyester/hub/GraphQLCommonQueries.java
+:100644 100644 90941b5432bba9d7b8665b9fce700f0981efadf1 b140c5361c77512903c61b31aa02edbd3921f64a M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java

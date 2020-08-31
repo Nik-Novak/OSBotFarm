@@ -1,0 +1,13 @@
+commit 07a16f6a83df2cb279217fb8be12fc219b7543c1
+tree 26518ac5c7d3ca48016aba898a2f37fc8a7fb2bd
+parent 6f6854df4f8a7005cf4aa8ebe9afdadd64c2f043
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-04 04:19:16 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-04 04:19:16 -0400
+
+    Removed local filepaths to allow for CI/CD and platform agnostic builds
+
+
+:100644 100644 5eb3cf615fe8896a0da5b4ba71671fb9e6ae69f8 c551ac021cb4e2283401131a8a2bdcc9a7cb7b1e M	EasyClueSolver/build.gradle
+:100644 100644 312bedaea6fa242e5288c4d4865bd2ba9c18b661 d5da8fef0080a24c7433a55c6eb46d04dcd80761 M	PolyesterFramework/build.gradle
+:100644 100644 00287a939e0a443b2f2da9ce5221d566e70b00e5 af6a63cc80930f81bbfc8b336c1e5bafbb18f35f M	PolyesterHub/build.gradle
+:100644 100644 a050881061652707aac0da9e78af6b512723a252 1d7e446af317386ea7a2ff2e8e5c63a123b370b7 M	PolyesterQuester/build.gradle

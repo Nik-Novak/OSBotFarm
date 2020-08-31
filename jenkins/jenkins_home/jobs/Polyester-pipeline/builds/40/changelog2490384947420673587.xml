@@ -1,0 +1,22 @@
+commit dbb3a59440df0955e66fbba9de2fe110d00c7518
+tree 20b13f0c3c6893610dcfacae65408c5c6051c982
+parent ea682fb1d3ce842377f4c727f562e40c1a7615c4
+author nickl <nickl@10.0.0.225> 2020-04-05 03:26:05 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-05 03:26:05 -0600
+
+    Rest of the networking changes
+
+:100644 100644 7e062085cb464cadbfb5beec39a90bffcb9d9d66 f847b326e342987682b7f6d9eeb38637ed037f17 M	PolyesterFramework/src/main/java/polyester/io/client/PolyesterClient.java
+:100644 100644 8a4c6e4221a6f0d02ca462529910d328761ae698 26527e01923f202be34e84ad16f719d66ace765b M	PolyesterFramework/src/main/java/polyester/io/protocol/listener/ClientListener.java
+:100644 100644 07795829cc5d94c67753e2a007e4ef79fb9914d5 d639ced9075ca776813c545133e01b9565afbc6c M	PolyesterHub/src/main/java/polyester/hub/AccountInfo.java
+:100644 100644 2de51345e658772bc9f89e1f27bbf7670264b409 6982e1feb43ff5be288fb4d92f6dc8f237f86f7f M	PolyesterHub/src/main/java/polyester/hub/AccountPanel.java
+:100644 100644 c05a77bf46b8eee819150682b6c883460488aeed 962a5c9826a42d4459aaefc4066570523afc9b38 M	PolyesterHub/src/main/java/polyester/hub/HubUI.java
+:100644 100644 81bd7d9645b4a52007c40089cdc2182c96dc0228 6acb4ee1940e5212f426173046cc94991359c9d9 M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 9e7dd335d9f6f4ee0a3c9efa8c65c18735ebcb16 1d7efcce897938375bbdde5ab96891780e60ee40 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 a34e032e148d9facedd54b229fd67b5b0db4a0d4 37e86897b8325d8273198cb8071c2e93e58bce41 M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java
+:100644 100644 f6990baf1d5f0e7d7aa762cc79427dda0e9e5e32 a32d4ccecee5ed2d74f616970d0b7e8ea15e9dd0 M	PolyesterHub/src/main/java/polyester/hub/ServerConnection.java
+:100644 100644 2d86ed43864935c0c2195922fd37d1d7cbb16e54 99ca53f76822911849403c1f65f0a10e89007514 M	PolyesterHub/src/main/java/polyester/hub/farming/AccountPrepareMethod.java
+:100644 100644 51294110c9215354e69f7d319c8ddbde719b92f8 cc63f8ebb03d5c6d12d9b64776c83fb27a3287a3 M	PolyesterHub/src/main/java/polyester/hub/farming/BuyingSardinesMethod.java
+:100644 100644 43cc4659586a5b39d6b5183f7c10610564d0baa8 77035dcd1e79b7475c457f5e808955c9912d47fd M	PolyesterHub/src/main/java/polyester/hub/farming/FarmingMethod.java
+:100644 100644 9463a0efe98b1c0e65bf9ee3e1ac333ce024843c 87dbafa5c6b53379ba9c7d56d9f7f5d8398471f8 M	PolyesterHub/src/main/java/polyester/hub/farming/FillingMethod.java
+:100644 100644 eb6229ba93853fdeb80e11b458a1cad3db098fb4 fd47a3ca5d66bdc79e7a9456f2de4a729ae78466 M	PolyesterHub/src/main/java/polyester/hub/listener/ServerListener.java

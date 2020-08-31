@@ -1,0 +1,9 @@
+commit 10322f2ce846567341fcafa67535c14bfe3261aa
+tree 86114dbf258fe1c9e8f19bef4a74c98376d1a68a
+parent aec5f67949ebca60b7da22fdb7d482a1215575b9
+author nickl <nickl@10.0.0.225> 2020-04-05 03:38:19 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-05 03:38:19 -0600
+
+    Clients connect to manager IP
+
+:100644 100644 ebe454f1b69db36ddfc1bc0ee956ca403f8439f4 29ebd2080f6031618a58691d43be1c6db306c1ec M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java

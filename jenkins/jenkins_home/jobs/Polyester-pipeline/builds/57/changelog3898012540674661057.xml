@@ -1,0 +1,54 @@
+commit 604d9af2144067895c9008006bf5f658b66ffb1a
+tree 52027836ccb50d7537e4ddf98b6d8641eeee9f81
+parent b67b4ae97b671450f53252be9e6e70eea8a354ee
+author nickl <nickl@10.0.0.225> 2020-05-04 21:58:43 -0600
+committer nickl <nickl@10.0.0.225> 2020-05-04 21:58:43 -0600
+
+    Small tutorial improvements
+
+:100644 100644 8a2ac8048b36789a42cbdfd7ed1c198dbda2605c a59561bbab9739d4790d5bbfda0cfcd75887e3ff M	PolyesterFramework/src/main/java/polyester/Antiban.java
+:100644 100644 fcf9595644cc6480a80c18703617623c3dba04de 4d634dba28bf20546272c7c1c9d1577852ad172a M	PolyesterFramework/src/main/java/polyester/task/node/ConversationNode.java
+:100644 100644 16630c71bda003d75fc4dd675cf3dff2f3750de7 d13d67ef23cc4df06c7a2a8a81329b140d7a5fed M	PolyesterFramework/src/main/java/polyester/task/node/TaskNode.java
+:100644 100644 549ee44b90585486f05865a7621ad7c080f77d34 ec11e9b1e49f7db2ecb56d24ed8fab1c17565ae8 M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 502258966a3a9b0289be6d9e52f470d7a72387bc 40fe997e7faf9102e7c90ceb4e38080dc44354c6 M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+commit b67b4ae97b671450f53252be9e6e70eea8a354ee
+tree 893aeb552cf09bd491d3631298392466dc60f9be
+parent 5566dfc4b2af573b6efe3841359472401eee690a
+author nickl <nickl@10.0.0.225> 2020-05-04 17:22:46 -0600
+committer nickl <nickl@10.0.0.225> 2020-05-04 17:22:46 -0600
+
+    Small bug-fix
+
+:100644 100644 c681a69167479edcd9f7a56af377ce1f67d19581 16630c71bda003d75fc4dd675cf3dff2f3750de7 M	PolyesterFramework/src/main/java/polyester/task/node/TaskNode.java
+:100644 100644 cc6a28e4b7db78fb6cd2372787c63a72546bafc3 502258966a3a9b0289be6d9e52f470d7a72387bc M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+commit b5b203cbb71587e7820c5daef369e6fe7084f517
+tree d157709404c6fec1b5f571bfbec01f70da689bc4
+parent a88d779b4de9ad4173e8d07d8519afaeaac8f16a
+author nickl <nickl@10.0.0.225> 2020-05-04 16:36:25 -0600
+committer nickl <nickl@10.0.0.225> 2020-05-04 16:36:25 -0600
+
+    Interaction and walking improvements
+
+:100644 100644 fd111689bd20e8ca8ef4c77d6df3847b135b7221 2e2cf415f6c0ff6d63fdc2f4d47332f4b8e8c6b5 M	PolyesterFramework/src/main/java/polyester/PolyesterScript.java
+:100644 100644 6f27fb49df8c522597b5b4d6c26887faaf1bbe72 adb87e4d62c31648c030307a88c4a51ab2a09983 M	PolyesterFramework/src/main/java/polyester/Settings.java
+:100644 100644 43df4b295a48003fba9285fe4b4601a235f8fc8d c681a69167479edcd9f7a56af377ce1f67d19581 M	PolyesterFramework/src/main/java/polyester/task/node/TaskNode.java
+:100644 100644 431c62e83b1af06af0147ac947cf6ab63bbc7df5 7acbd045888a3aa8333f616520b2c159e1b1fee4 M	PolyesterFramework/src/main/java/polyester/task/node/WalkNode.java
+:100644 100644 536a61c4f33927fd97b98cd92d70ccd5c184e878 c5d9be21163277ba8c5cbc3c1424fe71fc2bdc9f M	PolyesterFramework/src/main/java/polyester/task/node/interact/AbstractInteractNode.java
+:100644 100644 b0c23a600d4c51f5d1e7d37338790fb73c0df1ef 8e305181ad3f5cdfb0ff3338b9a0672a82d499d2 M	PolyesterFramework/src/main/java/polyester/util/constants/NPCList.java
+:100644 100644 d3a1c9f1a921570217795964aba3aa5c206b1db4 9faa8d1aac6ab7db4a06b4b4ba2b10fbd297b386 M	PolyesterFramework/src/main/java/polyester/web/WebBuilderCustom.java
+:100644 100644 13a7457034843e9898f5a0b4afb16b7221c57267 2be5c65ecccdf2a5d426d43f914b04582b395c26 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 29de203a5997d2ded29d08517d7d5af0674a213c 88abe9e1124a6e1e64dc2ecfc584e383252e67f2 M	PolyesterQuester/src/main/java/polyester/PolyesterQuester.java
+:100644 100644 666a94aceb55cd6b27a0ac80349253ee6f2e5dc7 476f5e5ce368d64675ac45651f9057aaafc4596c M	PolyesterQuester/src/main/java/polyester/task/StrongholdOfSecurityTask.java
+:100644 100644 5dd9b9caff3616343b46776bac159edc4dcc47fe cc6a28e4b7db78fb6cd2372787c63a72546bafc3 M	PolyesterQuester/src/main/java/polyester/task/TutorialIslandTask.java
+:100644 100644 9eec207be280b4c51ee7bd4e74229135d5bc2d40 fc94a8da3fd0114a754f569f5ed7acf228ffc6bf M	PolyesterQuester/src/main/java/polyester/task/quest/p2p/JunglePotionTask.java
+:100644 100644 a4123642ac9309a7b2da219a3c73b76b5ff30b05 e22f07e5656255895733c1a114ac739da6cc7f71 M	PolyesterQuester/src/main/java/polyester/task/quest/p2p/ShiloVillageTask.java
+commit d398b0cd37acb016cf657d3d1837eca46f9693c8
+tree 46087e86feea2d4af16cc0173fca108e0d8990a7
+parent 9194a4fe6bdfdb3bc52d9a540ea92d2f76f8eed6
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-29 21:15:21 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-29 21:15:21 -0400
+
+    removed debug messages
+
+
+:100644 100644 b2e3d8f992ccaac4bb79961c618fbd9869b8f334 448a6cd0629408b9cea85a448b26d2c943181ff2 M	PolyesterHub/src/main/java/polyester/hub/GraphQLCommonQueries.java

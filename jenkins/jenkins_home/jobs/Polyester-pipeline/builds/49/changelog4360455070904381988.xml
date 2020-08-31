@@ -1,0 +1,38 @@
+commit 267c036e6352ad623f15ab0fd22337970efe5099
+tree e4fb61fb8eeea866494c50ae1d7c7c9b2144c28c
+parent 5a6a30777503d49ccfd7e359b8ae78c3bdb4901c
+author nickl <nickl@10.0.0.225> 2020-04-11 19:28:01 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-11 19:28:01 -0600
+
+    Fixed bug with bot breaks
+
+:100644 100644 e32cae282ea7ea461ccf4b0e7345a5e1efb2fd0a e3c8ba42ed9b4c07f6fbba4ef40f41651e5e963b M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java
+:100644 100644 795f07225df639252d8692a1ecfb59432c86cd0f fe7a6c5264ba998c63479ca5d01161634d80dc54 M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 7ff3f66fac34670dfa5f78bb0a0a448699bfe70d 73f6e932236c80030fc43cc1d7d11079f1a9b173 M	PolyesterHub/src/main/java/polyester/hub/listener/ServerListener.java
+commit 5a6a30777503d49ccfd7e359b8ae78c3bdb4901c
+tree c0289028445a78f5f104ab0046a74665759a769b
+parent 8e6e986b85331db4f0a3270810b75b7361866dd4
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-11 18:32:37 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-11 18:32:37 -0400
+
+    Updated random world query to newer more maintainable format
+
+
+:100644 100644 2a8692ef5413e78f10f2737014832c52dfbe1992 e32cae282ea7ea461ccf4b0e7345a5e1efb2fd0a M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java
+commit cec5d974791b7acba0d4af4a6c5c2e7565c0a3f1
+tree a4e54495bbf24257b4c148138d50230d61d3f04a
+parent 7c2e91434564a27f39f82ecfeaf0c14d1d13a60e
+author nickl <nickl@10.0.0.225> 2020-04-11 15:30:34 -0600
+committer nickl <nickl@10.0.0.225> 2020-04-11 15:30:34 -0600
+
+    Updated getselecteditem hooks
+
+:100644 100644 09dd44407a484ebc5e777eb05d0f601fd9630484 27e564dba4f4e83449986e8fcc26f385251fd8a2 M	PolyesterFramework/src/main/java/polyester/task/node/interact/ItemEntityNode.java
+:100644 100644 735d82ad6d6c3bed71b8aadff9c1b7ae8946c79f 17b5d2a653b2817c647f2ecdbad46f63eb69d0d6 M	PolyesterFramework/src/main/java/polyester/task/node/interact/ItemObjectCrafter.java
+:100644 100644 9392c59ae9726a11f8b86c3d35cf77a953cbc07d 4a9865963a2a3a8df2d25574ff6f58f614ce9726 M	PolyesterHub/src/main/java/polyester/hub/AccountManager.java
+:100644 000000 e0ada8ccb87ee0e5f404084bda3c82d26afce4d3 0000000000000000000000000000000000000000 D	PolyesterHub/src/main/java/polyester/hub/GraphQL.java
+:100644 100644 cf7a9e718d65f3feac91e72ecec214ede139d2cb be1c8cf117094e3f94c4c16a83f8078bbad924c6 M	PolyesterHub/src/main/java/polyester/hub/GraphQLClient.java
+:100644 100644 9bffe3e2224a74477c3865b433f6db93163db2ec 82a8e7574765154a0583d3ee6cafe044c471824b M	PolyesterHub/src/main/java/polyester/hub/HubUI.java
+:100644 100644 998f26597111a2e8eda2edd453cbc71493d9d517 795f07225df639252d8692a1ecfb59432c86cd0f M	PolyesterHub/src/main/java/polyester/hub/PolyesterHub.java
+:100644 100644 ce0da6d791cb305ed63b4a61c7d61fffd5e9bacd 26e04d50fbd9cae6959f32a69b51e67711d3f752 M	PolyesterHub/src/main/java/polyester/hub/PolyesterManager.java
+:100644 100644 5772abe36c5708d9dd2d5cd7e3d634eb76beb5eb 7a79771395fbb84cead69317358bb889654aa14a M	PolyesterHub/src/main/java/polyester/hub/PolyesterServer.java

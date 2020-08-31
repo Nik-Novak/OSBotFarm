@@ -1,0 +1,6 @@
+{
+  "environment": "production",
+  "protocol": "https",
+  "host": "services.osrsmillionaires.tk/account-administration",
+  "port": "8000"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "description": "Mongo and Mongoose models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OSRSMillionaires",
+  "license": "Proprietary",
+  "dependencies": {
+    "mongoose": "^5.9.4"
+  }
+}

@@ -1,0 +1,11 @@
+commit bf920d42727a1d34ab4ffa199f1dd91f5053bfd9
+tree e2aae2fb75a7ccc44dba3284b8e890c76ff8ce25
+parent 07a16f6a83df2cb279217fb8be12fc219b7543c1
+author Nik-Novak <novakn@mcmaster.ca> 2020-04-05 05:19:12 -0400
+committer Nik-Novak <novakn@mcmaster.ca> 2020-04-05 05:19:12 -0400
+
+    Fixed duplicate dependencies
+
+
+:100644 100644 af6a63cc80930f81bbfc8b336c1e5bafbb18f35f 210b0a320414aa05f91c396f1e81c3ba4e98906e M	PolyesterHub/build.gradle
+:100644 100644 1d7e446af317386ea7a2ff2e8e5c63a123b370b7 96d1393e5973b64283c3fee2aef97cef495ade4e M	PolyesterQuester/build.gradle
